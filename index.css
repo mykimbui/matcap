@@ -1,0 +1,70 @@
+canvas {
+/*  width: 100vw;
+height: 100vh;*/
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.info {
+    display: none;
+}
+
+@scale: 1.5;
+
+.info-part--0,
+.info-part--1,
+.info-part--2 {
+    position: fixed;
+    z-index: 10;
+
+    display: block;
+    width: 60vw;
+    height: 90vh;
+    margin: 2rem;
+
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100% auto;
+
+    // border: 1px solid red;
+
+    mix-blend-mode: difference;
+
+    pointer-events: none;
+    touch-action: none;
+}
+
+.info-part--0 {
+    left: 0;
+    bottom: 0;
+
+    @ratio: 0.415;
+    width: 40vw * @scale;
+    height: 40vw * @ratio * @scale;
+
+    background-image: url( https://s3-us-west-2.amazonaws.com/s.cdpn.io/181962/info--01--01.svg );
+}
+
+.info-part--1 {
+    right: -2vw;
+    top: 0;
+
+    @ratio: 0.415;
+    width: 41vw * @scale;
+    height: 41vw * @ratio * @scale;
+
+    background-image: url( https://s3-us-west-2.amazonaws.com/s.cdpn.io/181962/info--01--02.svg );
+}
+
+
+.info-part--2 {
+    left: 0;
+    top: 0;
+
+    @ratio: 0.415;
+    width: 41vw * @scale;
+    height: 41vw * @ratio * @scale;
+
+    background-image: url( https://s3-us-west-2.amazonaws.com/s.cdpn.io/181962/info--01--03.svg );
+}
